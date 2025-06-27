@@ -114,6 +114,30 @@ image {
     margin-bottom: 20px;
 }
 
+/* Testimonials */
+
+.testimonials{
+  padding: 40px 0;
+
+}
+
+.testimonials .testimonials-heading {
+    width: 700px;
+    margin-bottom: 40px;
+
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px ;
+}
+
+.testimonials .card p:nth-child(2){
+    margin-top: 30px;
+    font-weight: bold;
+}
+
 /* Utility Classes */
 
 .container {
@@ -211,7 +235,6 @@ image {
 .bg-light {
     background: var(--light-color);
     color: #333;
-
 }
 
 .bg-dark {
@@ -222,4 +245,25 @@ image {
 .bg-black{
     background: #000;
     color: #fff;
+}
+
+/* Card */
+
+.card{
+    background: white;
+    color: #000;
+    border-radius: 10px;
+    padding: 20px;
+    
+}
+
+
+/* PRICING */
+
+.pricing .container{
+    padding: 40px 0;
+}
+
+.pricing h1{
+    text-align: center;
 }
