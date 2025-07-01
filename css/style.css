@@ -188,6 +188,13 @@ image {
 
 }
 
+.pricing .bg-light {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    
+    
+}
+
 .pricing .pricing-card-price {
     margin-bottom: 30px;
     padding: 20px 0;
@@ -322,6 +329,7 @@ image {
 }
 
 .footer .card {
+    padding: 20px 20px 0 20px;
     margin: 20px 30px 30px 0;
 }
 
@@ -331,21 +339,21 @@ image {
     border: 1px solid #ccc;
     border-radius: 5px;
     margin: 20px 0;
+    margin-right: 5px;
 }
 
 .footer form {
     display: flex;
     justify-content: space-between;
     align-items: center;
-   
-
+ 
 
 }
 
 .footer form button {
   
-  margin-left: 20px;
-
+    margin-left: 5px;
+ width: auto;
 }
 
 .footer input:focus {
@@ -572,13 +580,18 @@ image {
         display: block;
     }
 
-    /* 
+
+    
+    
     .hero .container {
         background: url('../images/hero-bg-mobile.png') no-repeat;
         background-size: 350px 400px;
         background-position: bottom;
-        height: 770px;
+        height: 860px;
+      
     }
+
+   
 
     .hero .hero-content,
     .hero .hero-text {
@@ -588,11 +601,15 @@ image {
     }
 
     .hero .hero-buttons .btn {
-        margin-bottom: 10px;
+        margin-bottom: 0px;
         display: block;
         width: 100%;
+        
     }
- */
+
+
+    .vdeo .video-content {}
+    
 
     .testimonials .testimonials-heading {
         max-width: 100%;
