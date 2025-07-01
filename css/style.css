@@ -16,6 +16,7 @@ body {
     font-size: 16px;
     line-height: 1.5;
     background: #fff;
+    overflow-x: hidden;
 }
 
 a {
@@ -61,7 +62,7 @@ image {
     padding: 10px 20px;
     display: block;
     font-weight: 600;
-    transition: 0.5s;
+    transition: 0.2s;
 
 }
 
@@ -79,11 +80,31 @@ image {
     margin-left: 10px;
 }
 
+.navbar ul li:last-child a:hover {
+    background: #4891FF;
+    color: #ffff;
+}
+
 /* Hero */
 
 .hero {
     margin-bottom: 50px;
 }
+
+.hero .hero-text {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    /* Regular */
+    margin-bottom: 30px;
+}
+
+
+.hero a:last-child:hover {
+    background: #4891FF;
+    color: #FFFFFF
+}
+
+
 
 .hero .container {
     background: url('../images/hero-bg.png') no-repeat;
@@ -121,6 +142,10 @@ image {
 .testimonials {
     padding: 40px 0;
 
+}
+
+.testimonials .card p:first-child {
+    font-style: italic;
 }
 
 .testimonials .testimonials-heading {
@@ -231,8 +256,10 @@ image {
 
 
 .faq .faq-group .faq-group-body.open {
-     display: block;
+    display: block;
 }
+
+
 
 .faq ul.faq-menu {
     max-width: 400px;
@@ -240,7 +267,7 @@ image {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #ddd;
+    background: #F4F4F6;
     padding: 10px 20px;
     border-radius: 10px;
     font-weight: 600;
@@ -253,13 +280,19 @@ image {
     text-align: center;
 }
 
-.faq ul.faq-menu li.active{
+.faq ul.faq-menu li:nth-child(2):hover,
+.faq ul.faq-menu li:nth-child(3):hover {
+    background: #DBE7F9;
+    color: #131316;
+}
+
+.faq ul.faq-menu li.active {
     background: var(--primary-color);
     color: #fff;
 }
 
 /* Footer */
-.footer{
+.footer {
     padding: 40px 0;
 }
 
@@ -270,6 +303,7 @@ image {
 .footer ul li {
     line-height: 2.5;
 }
+
 .footer a {
     color: #ccc;
 }
@@ -282,7 +316,7 @@ image {
 .footer-grid {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr 1fr;
-    gap:30px; 
+    gap: 30px;
     justify-content: center;
     align-items: center;
 }
@@ -299,11 +333,42 @@ image {
     margin: 20px 0;
 }
 
+.footer form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+
+
+}
+
+.footer form button {
+  
+  margin-left: 20px;
+
+}
+
+.footer input:focus {
+    border-color: #4891FF;
+    /* Set your custom focus border color */
+    outline: none;
+    /* Remove default black/blue outline */
+    /*   background-color: #F0F8FF;  */
+}
+
 .footer .contact {
     margin-bottom: 80px;
 
 }
+
+.footer .copyrights {
+    margin-top: 40px;
+    font-size: 15px;
+}
+
 /* Utility Classes */
+
+
 
 .container {
     max-width: 1100px;
@@ -333,6 +398,12 @@ image {
 
 /* Buttons */
 
+.btn:hover {
+    background: #1570F9;
+}
+
+
+
 .btn {
     display: inline-block;
     padding: 13px 20px;
@@ -344,13 +415,11 @@ image {
     border-radius: 10px;
     cursor: pointer;
     text-align: center;
-    transition: 0.5s;
+    transition: 0.2s;
 }
 
 
-.btn:hover {
-    opacity: 0.8;
-}
+
 
 .btn-primary {
     background: var(--primary-color);
@@ -423,3 +492,142 @@ image {
     background: #000;
     color: #fff;
 }
+
+
+/* Hamburger button */
+
+.hamburger-button {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1000;
+}
+
+.hamburger-button .hamburger-line {
+    width: 30px;
+    height: 3px;
+    background: #333;
+    margin: 6px 0;
+}
+
+/* Mobile Menu
+
+ */
+
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 250px;
+    height: 100%;
+    z-index: 100;
+    background: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    transition: right 0.3s ease-in-out;
+}
+
+
+.mobile-menu.active {
+    right: 0;
+}
+
+
+.mobile-menu ul {
+    margin-top: 100px;
+    padding-right: 10px;
+}
+
+.mobile-menu ul li {
+    margin-top: 10px 0;
+
+}
+
+.mobile-menu ul li a {
+    font-size: 20px;
+    transition: 0.3s;
+
+}
+
+
+
+/* Media Queries */
+
+/* Under 906px */
+@media (max-width:960px) {
+    .text-xxl {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width:670px) {
+
+    .navbar .main-menu {
+        display: none;
+
+    }
+
+    .navbar .hamburger-button {
+        display: block;
+    }
+
+    /* 
+    .hero .container {
+        background: url('../images/hero-bg-mobile.png') no-repeat;
+        background-size: 350px 400px;
+        background-position: bottom;
+        height: 770px;
+    }
+
+    .hero .hero-content,
+    .hero .hero-text {
+        width: 100%;
+        text-align: center;
+
+    }
+
+    .hero .hero-buttons .btn {
+        margin-bottom: 10px;
+        display: block;
+        width: 100%;
+    }
+ */
+
+    .testimonials .testimonials-heading {
+        max-width: 100%;
+        text-align: center;
+
+
+    }
+
+    .testimonials .testimonials-grid,
+    .testimonials .card {
+        display: block;
+        margin-bottom: 10px;
+
+    }
+
+
+
+
+
+    /* TEXT */
+    .text-xl {
+        font-size: 1.9rem;
+    }
+
+    .text-lg {
+        font-size: 1.5rem;
+    }
+
+    .text-md {
+        font-size: 1.1rem;
+    }
+
+
+
+
+}
+
+@media (max-width:500px) {}
